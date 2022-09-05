@@ -11,7 +11,6 @@ This project is to build an API for a social network web application in which us
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contribution](#contribution)
-  - [Testing](#testing)
   - [Questions](#questions)
   - [License](#license)
     
@@ -23,26 +22,18 @@ This project is to build an API for a social network web application in which us
  Step 1: Clone the code <br>
  Step 2: Locate the cloned code via terminal <br>
  Step 3: Run "npm install" <br>
- Step 4: Run "npm start".
+ Step 4: Run "npm start". <br>
+
 
 ## Usage
 
   Here is a helpful video to follow: 
+  https://drive.google.com/file/d/18GYkxIef0sZ6fYvTHEckIg_A54-U9gqg/view
       
 ## Contribution
 
 You can contribute to this project by:
 - Submitting bugs and feature requests
-
-      
-## Testing
-
- Follow these steps to install or run this application:
-
- Step 1: Clone the code <br>
- Step 2: Locate the cloned code via terminal <br>
- Step 3: Run "npm install" <br>
- Step 4: Run "npm start".
       
 ## Questions
       
