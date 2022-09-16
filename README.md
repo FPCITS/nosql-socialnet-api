@@ -3,6 +3,7 @@
 ## Description
 
 This project is to build an API for a social network web application in which users can share their thoughts, react to friends' thoughts, and create a friend list using Express.js for routing, a MongoDB database, and the Mongoose ODM.
+This project was updated to be a UI for people who do not have Insomnia in which they can post and view data.
 
 ![badge](https://img.shields.io/badge/license-MITLicense-brightorange)
 
@@ -49,5 +50,3 @@ You can contribute to this project by:
   MIT License.
       
   For more information please view the [license description](https://choosealicense.com/licenses/mit/).
-  
-  
