@@ -4,6 +4,13 @@ const thoughtController = {
 
     getThoughts(req, res) {
         Thought.find({})
+        Thought.find({})
+      .populate({
+        path: 'comments',
+        select: '-__v'
+      })
+      .select('-__v')
+      .sort({ _id: -1 })
             .then(thoughtData => res.json(thoughtData))
             .catch(err => {
                 console.log(err);
@@ -12,6 +19,11 @@ const thoughtController = {
     },
     getThoughtByID({ params }, res) {
         Thought.findOne({ _id: params.thoughtId })
+        .populate({
+            path: 'comments',
+            select: '-__v'
+          })
+          .select('-__v')
             .then(thoughtData => res.json(thoughtData))
             .catch(err => {
                 console.log(err);
@@ -32,7 +44,7 @@ const thoughtController = {
                     res.status(404).json({ message: 'No thoughts with this ID.' });
                     return;
                 }
-                res.json(dbPizzaData);
+                res.json(dbSocialData);
             })
             .catch(err => res.json(err));
     },
@@ -43,7 +55,7 @@ const thoughtController = {
                     res.status(404).json({ message: 'No user with this ID.' });
                     return;
                 }
-                res.json(dbPizzaData);
+                res.json(dbSocialData);
             })
             .catch(err => res.json(err));
     },
@@ -54,7 +66,7 @@ const thoughtController = {
                     res.status(404).json({ message: 'No user with this ID.' });
                     return;
                 }
-                res.json(dbPizzaData);
+                res.json(dbSocialData);
             })
             .catch(err => res.json(err));
     },
@@ -69,7 +81,7 @@ const thoughtController = {
                 res.status(404).json({ message: 'No reaction with this ID.' });
                 return;
             }
-            res.json(dbPizzaData);
+            res.json(dbSocialData);
         })
         .catch(err => res.json(err));
     },
@@ -84,7 +96,7 @@ const thoughtController = {
                 res.status(404).json({ message: 'No thoughts with this ID.' });
                 return;
             }
-            res.json(dbPizzaData);
+            res.json(dbSocialData);
         })
         .catch(err => res.json(err));
     }
