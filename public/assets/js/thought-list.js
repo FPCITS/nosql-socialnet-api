@@ -11,16 +11,16 @@ const getThoughtList = () => {
     });
 };
 
-const printThought = ({ _id, yourName, feeling, commentCount, thought, createdAt }) => {
+const printThought = ({ _id, yourName, feeling, comment, thought, createdAt }) => {
   const thoughtCard = `
     <div class="col-12 col-lg-6 flex-row">
       <div class="card w-100 flex-column">
         <h3 class="card-header">${yourName}</h3>
         <div class="card-body flex-column col-auto">
-          <h4 class="text-dark">Your Thought ${thought}</h4>
+          <h4 class="text-dark">Thought ${thought}</h4>
           <p>On ${createdAt}</p>
-          <p>${commentCount} Comments</p>
-          <h5 class="text-dark">You were feeling: ${feeling}
+          <p>${comment} Comments</p>
+          <h5 class="text-dark">Feeling: ${feeling}
           <ul>
             
           </ul>

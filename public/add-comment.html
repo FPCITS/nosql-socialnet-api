@@ -26,19 +26,29 @@
     <main
       class="container-fluid flex-row mx-auto justify-space-between align-start"
     >
-      <section class="p-9 col-18 col-lg-8 mb-3 squared">
-        <h2 class="text-dark ">Check out your past thoughts and see how your mindset has progressed!</h2>
-        <div id="thought-list" class="flex-row justify-space-between"></div>
-      </section>
+    <!-- new comment form -->
+<form id="new-comment-form" class="bg-dark p-3 mb-3 square">
+  <div class="mb-2">
+    <label for="written-by">Leave Your Name</label>
+    <input
+      class="form-input"
+      id="written-by"
+      name="written-by"
+      placeholder="Name"
+      required
+    />
+  </div>
+  <div class="mb-2">
+    <label for="comment">Leave Your Comment</label>
+    <textarea
+      class="form-textarea form-input"
+      id="comment"
+      name="comment"
+      required
+    ></textarea>
+  </div>
 
-      <section class="bg-dark p-3 col-12 col-lg-4 mb-3 square">
-        <h3 class="text-light">
-        <nav><a class="btn display-block square" href="/add-thought"
-            >Create a new thought.</a
-          ></nav></h3>
-        </nav>
-      </section>
-    </main>
-    <script src="./assets/js/thought-list.js"></script>
-  </body>
-</html>
+  <button type="submit" class="m-auto btn display-block w-100">Submit Comment!</button>
+</form>
+
+<script src="./assets/js/add-comment.js"></script>

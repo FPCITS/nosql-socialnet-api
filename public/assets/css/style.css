@@ -278,7 +278,7 @@ select {
   display: inline;
 }
 
-.rounded {
+.squared {
   border-radius: var(--border-radius);
 }
 

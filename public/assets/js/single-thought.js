@@ -45,18 +45,18 @@ function printThought(ThoughtData) {
   if (comments && comments.length) {
     comments.forEach(printComment);
   } else {
-    $commentSection.innerHTML = '<h4 class="bg-dark p-3 rounded">No comments yet!</h4>';
+    $commentSection.innerHTML = '<h4 class="bg-dark p-3 squared">No comments yet!</h4>';
   }
 }
 
 function printComment(comment) {
   const commentDiv = document.createElement('div');
-  commentDiv.classList.add('my-2', 'card', 'p-2', 'w-100', 'text-dark', 'rounded');
+  commentDiv.classList.add('my-2', 'card', 'p-2', 'w-100', 'text-dark', 'squared');
 
   const commentContent = `
       <h5 class="text-dark">${comment.writtenBy} commented on ${comment.createdAt}:</h5>
       <p>${comment.commentBody}</p>
-      <div class="bg-dark ml-3 p-2 rounded" >
+      <div class="bg-dark ml-3 p-2 squared" >
         ${
           comment.replies && comment.replies.length
             ? `<h5>${comment.replies.length} ${
@@ -86,7 +86,7 @@ function printComment(comment) {
 
 function printReply(reply) {
   return `
-  <div class="card p-2 rounded bg-secondary">
+  <div class="card p-2 squared bg-secondary">
     <p>${reply.writtenBy} replied on ${reply.createdAt}:</p>
     <p>${reply.replyBody}</p>
   </div>
